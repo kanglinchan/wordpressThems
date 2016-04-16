@@ -1,0 +1,327 @@
+/*  
+Theme Name: Tutorial
+
+Theme URI: http://www.wpdesigner.com
+
+Description: This is my theme for a tutorial.
+
+Version: 1.0
+
+Author: Small Potato
+
+Author URI: http://www.wpdesigner.com/
+*/
+
+
+
+*{margin: 0;padding: 0;list-style: none;}
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 清除浮动 */
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clear {
+  *zoom: 1;
+}
+
+
+/* font-face字体设置 */
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?xdra2m');
+    src:    url('fonts/icomoon.eot?xdra2m#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?xdra2m') format('truetype'),
+        url('fonts/icomoon.woff?xdra2m') format('woff'),
+        url('fonts/icomoon.svg?xdra2m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+    content: "\e900";
+}
+.icon-quill:before {
+    content: "\e901";
+}
+.icon-spinner3:before {
+    content: "\e902";
+}
+.icon-menu:before {
+    content: "\e903";
+}
+.icon-circle-up:before {
+    content: "\e904";
+}
+.icon-circle-right:before {
+    content: "\e905";
+}
+.icon-circle-down:before {
+    content: "\e906";
+}
+.icon-circle-left:before {
+    content: "\e907";
+}
+
+
+
+
+
+
+/* 	开始 */
+
+
+body{
+	margin-top: 65px;
+	background-color: #eee;
+}
+
+
+#header{
+	height: 64px;
+	width: 100%;
+	background-color: #fff;
+	position:fixed;
+	box-shadow: 0 1px 1px #aaa;
+	-webkit-box-shadow: 0 1px 1px #aaa;
+	-moz-box-shadow:0 1px 1px #aaa;
+	top: 0px;
+}
+
+
+.nav_main{
+	width: 85%;
+	margin: auto;
+	padding: auto 20px;
+}
+
+.header_title{
+	float: left;
+	padding: 6px 0;
+	display: inline-block;
+}
+.header_title h1{
+	display: inline;
+	font-size: 22px;
+}
+.menu_top{
+	display: inline-block;
+  	font-size: 15px;
+  	float: right;
+  	position: static;
+}
+
+.menu li{
+	float:left;
+	padding: 16px 4px;
+	list-style: none;
+
+}
+
+.menu li a{
+	display: inline-block;
+	padding: 5px 10px; 
+	
+	border-radius: 3px;
+}
+
+.menu li a:link{
+	color: #777;
+}
+.menu li a:hover{
+	background-color: #777;
+	text-decoration: none;
+	color: #fff;
+}
+
+.sub-menu{
+	position: absolute;
+	background-color: #fff;
+	margin: 16px -10px;
+	border-radius: 3px;
+	box-shadow: 0 0 2px #666;
+	-webkit-box-shadow:0 0 2px #666;
+	-moz-box-shadow:0 0 2px #666;
+
+}
+
+.sub-menu li{
+	display: block;
+	padding: 0px;
+	float: none;
+
+}
+.sub-menu li a{
+	display: block;
+	padding: 10px 8px;
+	border-radius: 0;
+}
+.sub-menu li a:link{
+	color: #777;
+}
+.sub-menu li a:hover{
+	background-color: #777;
+	color: #fff;
+	text-decoration: none;
+}
+.sub-menu li a:visited{
+	color: #777;
+}
+
+
+.nav_btn{
+	display: none;
+}
+
+@media screen and (max-width: 1140px) {
+    .nav_main{
+	width: 90%;
+	}
+}
+
+@media screen and (max-width: 760px){
+
+	.nav_btn{
+		display: inline-block;
+		margin-right: 20px;
+		float: right;
+		margin: 18px 20px;
+		font-size: 20px;
+		padding: 5px 10px;
+		border: 1px solid #999;
+		border-radius: 3px;
+		color: #888;
+	}
+
+	.nav_main{
+	width: 100%;
+	}
+
+	.header_title{
+		margin-left: 20px; 
+		
+	}
+
+
+	.menu_top {
+		display: block;
+		float: none;
+		clear: left;		
+
+	}
+
+	.menu li{
+		padding: 0px;
+		float: none;
+		background-color: #333;
+		border-top: 1px solid #444;
+	}
+
+	.menu li a{
+		padding: 5px;
+		display: block;	
+	}
+	.menu li a:link{
+		color: #fff;
+	}
+	.menu li a:hover{
+		color: #fff;
+		text-decoration: none;
+		border-radius: 0px;
+	}
+	.menu li a:visited{
+		color: #fff;
+	}
+
+	.sub-menu {
+		margin: 0px;
+		position: relative;
+		box-shadow: none;
+		border-radius: 0;
+		text-indent: 20px;
+		background:rgba(20, 20, 20, 0.9) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+		filter:Alpha(opacity=80); background:#fff;/*实现IE背景透明*/
+	}
+	.sub-menu li{
+		text-indent: 20px;
+		background-color: #222;
+	}
+	
+}
+
+
+
+
+
+#search-2{
+	margin: 100px 100px;
+	width: 360px;
+	height: 100px;
+	border-radius: 3px;
+	border:1px solid #333;
+}
+
+
+
+
+/* 内容 */
+
+#container{
+	padding-top: 65px;
+	background-color: red;
+	width: 750px;
+}

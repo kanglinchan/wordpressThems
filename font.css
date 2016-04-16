@@ -1,0 +1,70 @@
+/* font-face字体设置 */
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?xdra2m');
+    src:    url('fonts/icomoon.eot?xdra2m#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?xdra2m') format('truetype'),
+        url('fonts/icomoon.woff?xdra2m') format('woff'),
+        url('fonts/icomoon.svg?xdra2m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+    content: "\e900";
+}
+.icon-quill:before {
+    content: "\e901";
+}
+.icon-spinner3:before {
+    content: "\e902";
+}
+.icon-menu:before {
+    content: "\e903";
+}
+.icon-circle-up:before {
+    content: "\e904";
+}
+.icon-circle-right:before {
+    content: "\e905";
+}
+.icon-circle-down:before {
+    content: "\e906";
+}
+.icon-circle-left:before {
+    content: "\e907";
+}
+
+
+
+@font-face {font-family: "webfont";
+  src: url('webfont.eot'); /* IE9*/
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('webfont.woff') format('woff'), /* chrome、firefox */
+  url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+
+.web-font {
+  font-family:"webfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
